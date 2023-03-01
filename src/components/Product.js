@@ -1,9 +1,18 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useDispatch } from 'react-redux';
+import { addProductToCart } from '../Redux/actions/products';
 import './Product.css';
 
-const Product = ({title,image,description,price}) => {
+const Product = ({id,title,image,description,price}) => {
+    const dispatch = useDispatch()
+
+    const addToCart = (e) => {
+        if(e.target?.id)
+        dispatch(addProductToCart(e.target?.id))
+    }
+
     return (
         <Card style={
             {width: '15rem',margin: '30px'}
@@ -15,7 +24,7 @@ const Product = ({title,image,description,price}) => {
                 {/* <Card.Text>
                     {description}
                 </Card.Text> */}
-                <Button variant="primary">Go somewhere</Button>
+                {/* <Button variant="primary" id={id} onClick={addToCart}>Add To Cart</Button> */}
             </Card.Body>
         </Card>
     )

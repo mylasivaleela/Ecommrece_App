@@ -6,7 +6,13 @@
 .search-field {
   height: 35px;
   width: 35%;
+  border: none;
   border-radius: 5px;
+  padding: 5px;
+}
+
+.search-field::after {
+  border: none;
 }
 
 .footer {

@@ -3,14 +3,16 @@ import './App.css';
 import Products from './components/Products';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { HomePage } from './components/HomePage';
 
 function App() {
   return (
     <div className='app'>
       {/* <Header /> */}
       <Banner />
-      <Products /> 
-      <Footer />
+      <HomePage />
+      {/* <Products />  */}
+      {/* <Footer /> */}
     </div>
   );
 }
